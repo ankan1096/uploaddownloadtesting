@@ -7,7 +7,6 @@ from numpy import array
 from numpy import vectorize as vec
 from numpy import binary_repr as binary
 from numpy import dstack as ds
-import cv2
 
 
 def home(request):
