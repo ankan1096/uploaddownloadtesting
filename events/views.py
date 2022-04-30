@@ -24,4 +24,5 @@ def home(request):
 			data = data + chr(x)
 		print(data)
 		sys.stdout.flush()
+		return render(request, 'home.html', {'sampleform' : sampleform, 'data' : data})
 	return render(request, 'home.html', {'sampleform' : sampleform})
