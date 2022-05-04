@@ -8,14 +8,14 @@
 		    <label for="sercretdatapath" class="form-label">Secret Data Path (.txt format)</label><br/>
 		        {{ sampleform.secret_data_path }}
 		        <br/><br/>
-		    <label for="filelocation" class="form-label">File Loction</label><br/>
-		        {{ sampleform.file_path }}
-		        <br/><br/>
 		        <button type="submit" class="btn btn-primary">Encode</button>
+
 	</form>
+
+	<br/><br/>
 
 	{% if data %}
 		{{ data }}<br/><br/>
-		{{ arr }}
+		{{ arr }}<br/><br/>
 	{% endif %}
 </div>

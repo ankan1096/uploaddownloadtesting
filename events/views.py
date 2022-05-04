@@ -14,7 +14,6 @@ def home(request):
 	if request.method == "POST":
 		user_input = request.FILES['user_input']
 		secret_data_path = request.FILES['secret_data_path']
-		file_location = request.POST.get('file_path')
 
 
 
@@ -27,11 +26,13 @@ def home(request):
 		for x in secret_content:
 			data = data + chr(x)
 		print(data)
-		print(file_location)
-		sys.stdout.flush()
+		#print(file_location)
+		
 
 		newImage = im.fromarray(arr, "RGB")
-		newImage.save(f"{file_location}/stego_image.png")
+		newImage.save(f"stego_image.png")
+		#print(newImage)
+		sys.stdout.flush()
 
 
 		return render(request, 'home.html', {'sampleform' : sampleform, 'data' : data, 'arr' : arr})
