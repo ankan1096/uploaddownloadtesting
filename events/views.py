@@ -31,7 +31,7 @@ def home(request):
 		
 
 		newImage = im.fromarray(arr, "RGB")
-		newImage.save(f"stego_image.png")
+		newImage.save("stego_image.png")
 
 		sys.stdout.flush()
 
