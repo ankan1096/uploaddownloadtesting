@@ -8,7 +8,7 @@ from numpy import vectorize as vec
 from numpy import binary_repr as binary
 from numpy import dstack as ds
 
-import urllib.request
+
 
 def home(request):
 	sampleform = SampleForm
@@ -32,8 +32,7 @@ def home(request):
 
 		newImage = im.fromarray(arr, "RGB")
 		newImage.save(f"stego_image.png")
-		urllib.request.urlretrieve("https://testingud.herokuapp.com/stego_image.png","myimage.png")
-		#print(newImage)
+
 		sys.stdout.flush()
 
 
